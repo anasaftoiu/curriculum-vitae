@@ -1,0 +1,120 @@
+body {
+  background-color: rgb(19, 19, 13);
+  color: #ffffff;
+}
+
+/*Personal and contact details Start*/
+
+/*We style the character layout in the browser
+*/
+
+.cv-header {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  /* Enable Flexbox on the main container */
+  display: flex;
+  /* Align elements vertically to the middle */
+  align-items: center;
+  /* Distribute space between elements */
+  justify-content: space-between;
+  text-align: left;
+}
+
+/* Style for Picture */
+.profil-img {
+  width: 100px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
+  border-radius: 50%; /* Make the image round */
+  object-fit: cover;
+  border: 3px solid lightblue; /* Elegant frame around the picture */
+}
+
+/* Text container gets the remaining space */
+.contact-info-container {
+  /* Leave more space Son the right, next to the picture */
+  margin-left: 20px;
+  /* Allow the container to use the available space */
+  flex-grow: 1;
+}
+
+/* Existing text styles (slightly modified to fit the layout) */
+.cv-header h3 {
+  font-size: 1.1em;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0; /* Adjust margins */
+}
+
+address,
+.social-link-without-dots {
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+/* Style social links as a single line */
+.social-link-without-dots {
+  display: flex;
+  gap: 20px; /* Spacing between LinkedIn and GitHub links */
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
+}
+.cv-header a {
+  color: #2200ff;
+  text-decoration: none;
+}
+.cv-header a:hover {
+  color: #00eeff;
+  text-decoration: underline;
+}
+
+/*Modify the styles to adapt the content of a phone.*/
+@media (max-width: 600px) {
+  /* Change the header Flexbox layout to vertical */
+  .cv-header {
+    flex-direction: column; /* Stivuiește elementele vertical */
+    text-align: center;
+    padding: 30px 15px; /* Increase padding to look better */
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* The image should be on top, and the margin on the text container disappears */
+  .contact-info-container {
+    margin-left: 0;
+    margin-top: 20px; /* Add space above text */
+  }
+
+  /* Shrink the image on a small screen */
+  .profil-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cv-headerh1,
+  .cv-header h3,
+  address,
+  .social-link-without-dots {
+    /* Social links align to the center */
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* For Tablets (between 601px and 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  /* Adjust padding for medium width */
+  .cv-header {
+    padding: 30px 30px;
+  }
+
+  /* Enlarge the fonts a little to make them readable on the tablet */
+  .cv-header h3 {
+    font-size: 1.2em;
+  }
+}
+/*Personal and contact details End*/
